@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/9ee2738572.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>To-dos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand active" href="#">Matt Palmer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active"  href="{% url 'home' %}">Home</a> </a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%static 'PalmerCV.pdf'%}">Resume</a> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'allblogs'%}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/mattpalmerr">Twitter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'quiz'%}">Quiz</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">To-do</h1>
+            <form class="search">
+                <input class="form-control m-auto" type="text" name="search" placeholder="search todos" />
+            </form>
+        </header>
+    
+    <ul class="list-group todos mx-auto text-light">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>run a 5k</span>
+            <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>eat some chicken</span>
+            <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>deadlift heavy</span>
+            <i class="far fa-trash-alt delete"></i>
+        </li>
+    </ul>
+
+    <form class="add text-center my-4">
+        <label class="text-light">Add a new todo...</label>
+        <input class="form-control m-auto" type="text" name="add" />
+    </form>
+    </div>
+
+    <script src="app.js"></script>    
+</body>
+</html>
