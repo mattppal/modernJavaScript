@@ -3,12 +3,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>object oriented js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>db firebase</title>
 </head>
 <body>
-    <h1>object oriented js</h1>
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+        </ul>
     
+    <form>
+        <label fore='recipe'>Add a new recipe:</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="recipe" required>
+            <div class="input-group-append">
+                <input type="submit" value="add" class="btn btn-outline-secondary">
+            </div>
+        </div>
+    </form>
+    </div>
+
     <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAC7F5ZgADsRxQ-aWigTDALAF5E6LzLNE8",
+        authDomain: "udemy-modern-javascript-e0bc2.firebaseapp.com",
+        databaseURL: "https://udemy-modern-javascript-e0bc2.firebaseio.com",
+        projectId: "udemy-modern-javascript-e0bc2",
+        storageBucket: "udemy-modern-javascript-e0bc2.appspot.com",
+        messagingSenderId: "36853423127",
+        appId: "1:36853423127:web:34b89d759bcfb05f60d052",
+        measurementId: "G-ZT6CY48R4L"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
     <script src="sandbox.js"></script>
 </body>
 </html>
