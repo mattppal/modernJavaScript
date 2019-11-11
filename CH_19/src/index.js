@@ -5,3 +5,6 @@ const greet = (name) => {
 greet('jasmine');
 greet('paul');
 greet('violet');
+greet('rocky');
+greet('java');
+greet('Nana')
