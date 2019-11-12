@@ -1,16 +1,23 @@
 {
-  "name": "CH_19",
+  "name": "ch_19",
   "version": "1.0.0",
   "description": "",
   "main": "sandbox.js",
   "scripts": {
-    "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js"
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1"
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^3.9.0"
   }
 }
